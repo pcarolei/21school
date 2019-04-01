@@ -1,0 +1,1 @@
+cat phonebook | grep -i 'nicolas.bauer' | awk '/-/' | awk '{print $(NF - 1)}' | tail -n +0
