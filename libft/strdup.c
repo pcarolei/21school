@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   strdup.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/07 13:59:32 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/02/07 13:59:34 by pcarolei         ###   ########.fr       */
+/*   Created: 2019/04/05 13:02:51 by pcarolei          #+#    #+#             */
+/*   Updated: 2019/04/05 13:02:56 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int		ft_strlen(char *str)
+int		strlen(char *str)
 {
 	int i;
 
@@ -22,14 +22,14 @@ int		ft_strlen(char *str)
 	return (i);
 }
 
-char	*ft_strdup(char *src)
+char	*strdup(char *src)
 {
 	int		i;
 	int		src_size;
 	char	*str_copy;
 
 	i = 0;
-	src_size = ft_strlen(src) + 1;
+	src_size = strlen(src) + 1;
 	str_copy = (char*)malloc(sizeof(char) * src_size);
 	while (src[i] != '\0')
 	{

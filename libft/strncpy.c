@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   strncpy.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/04 14:49:49 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/02/04 14:50:31 by pcarolei         ###   ########.fr       */
+/*   Created: 2019/04/05 13:03:34 by pcarolei          #+#    #+#             */
+/*   Updated: 2019/04/05 13:03:36 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+char	*strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i;
 

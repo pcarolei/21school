@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   strncmp.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/05 15:51:02 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/02/05 15:51:06 by pcarolei         ###   ########.fr       */
+/*   Created: 2019/04/05 13:03:22 by pcarolei          #+#    #+#             */
+/*   Updated: 2019/04/05 13:03:24 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i;
 
