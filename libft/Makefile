@@ -6,13 +6,12 @@ all: $(NAME)
 
 $(NAME):
 	gcc -Wall -Wextra -Werror -c *.c
-	ar -rc libft.a
+	ar -rc libft.a *.o
 
 clean:
 	rm -rf *.o
 
 fclean:
-	rm -rf $(NAME)
+	rm -rf libft.a
 
-re:
-	fclean all
+re: fclean all
