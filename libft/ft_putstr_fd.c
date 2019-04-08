@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/09 02:20:27 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/09 02:23:13 by pcarolei         ###   ########.fr       */
+/*   Created: 2019/04/09 02:12:27 by pcarolei          #+#    #+#             */
+/*   Updated: 2019/04/09 02:22:44 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#ifndef LIBFT_H
-#define LIBFT_H
-#include <unistd.h>
-void	ft_putchar(char c);
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char const *s, int fd);
 
-#endif
+#include "libft.h"
+
+void	ft_putstr_fd(char const *s, int fd)
+{
+	while (*s)
+		ft_putchar_fd(*s++, fd);
+}
