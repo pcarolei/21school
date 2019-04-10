@@ -6,13 +6,12 @@
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/09 02:20:27 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/09 04:53:25 by pcarolei         ###   ########.fr       */
+/*   Updated: 2019/04/10 21:54:44 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# define printi(s, n) printf("%s %d\n", s, n)
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
