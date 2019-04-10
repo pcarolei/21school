@@ -6,7 +6,7 @@
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/09 02:20:27 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/11 00:28:55 by pcarolei         ###   ########.fr       */
+/*   Updated: 2019/04/11 00:56:20 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <stdlib.h>
 # include <string.h>
 
+#define MAX(a, b) ((a > b)? a : b)
+
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_atoi(const char *str);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
