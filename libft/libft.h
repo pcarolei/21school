@@ -6,7 +6,7 @@
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/09 02:20:27 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/12 01:18:54 by pcarolei         ###   ########.fr       */
+/*   Updated: 2019/04/12 01:24:51 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ char	*ft_strnew(size_t size);
 void	ft_strdel(char **as);
 void	ft_strclr(char *s);
 int		ft_strequ(char const *s1, char const *s2);
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
 char	*ft_itoa(int n);
 void	ft_putchar(char c);
 void	ft_putstr(const char *s);
