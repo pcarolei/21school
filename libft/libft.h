@@ -6,7 +6,7 @@
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/09 02:20:27 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/12 00:58:14 by pcarolei         ###   ########.fr       */
+/*   Updated: 2019/04/12 01:07:01 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 
 void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
+char	*ft_strnew(size_t size);
 char	*ft_itoa(int n);
 void	ft_putchar(char c);
 void	ft_putstr(const char *s);
