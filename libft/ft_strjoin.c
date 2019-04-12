@@ -1,38 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strncat.c                                          :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/05 19:37:23 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/06 17:40:00 by pcarolei         ###   ########.fr       */
+/*   Created: 2019/04/12 04:14:13 by pcarolei          #+#    #+#             */
+/*   Updated: 2019/04/12 04:19:52 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		strlen(char *str)
+#include "libft.h"
+
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int i;
+	char	*ptr;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-char	*strncat(char *dest, char *src, int n)
-{
-	unsigned int i;
-	unsigned int k;
-
-	i = strlen(dest);
-	k = 1;
-	while (src[k] != '\0' && k < n)
-	{
-		dest[i] = src[k];
-		i++;
-		k++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	ptr = ft_strnew(ft_strlen(s1) + ft_strlen(s2) + 1);
+	ft_strncpy(ptr, s1, ft_strlen(s1));
+	ft_strncpy(ptr + ft_strlen(s1), s2, ft_strlen(s2));
+	return (ptr);
 }

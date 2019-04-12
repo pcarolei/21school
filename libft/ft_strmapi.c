@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcat.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/07 18:44:04 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/07 18:53:04 by pcarolei         ###   ########.fr       */
+/*   Created: 2019/04/12 04:08:26 by pcarolei          #+#    #+#             */
+/*   Updated: 2019/04/12 04:12:33 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	strlcat(char *dst, const char *src, size_t size)
-{
-	int	n;
+#include "libft.h"
 
-	n = 0;
-	while (size -strlen(dst) - 1 >= n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	char	*new_str;
+	size_t	i;
+
+	new_str = ft_strdup(s);
+	i = 0;
+	while (s[i])
 	{
-		dest[strlen(dst) + n] = src[n];
-		n++;
+		new_str[i] = f(i, new_str[i]);
+		i++;
 	}
-	if (dest[strlen(dst) + n - 1] != '/0')
-		dest[strlen(dst) + n] = '\0';
-	return (strlen(dst) + n);
+	return (new_str);
 }

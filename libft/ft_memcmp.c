@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tolower.c                                          :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/07 18:19:09 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/07 18:21:47 by pcarolei         ###   ########.fr       */
+/*   Created: 2019/04/11 23:59:04 by pcarolei          #+#    #+#             */
+/*   Updated: 2019/04/12 00:05:33 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int tolower(int c)
+#include "libft.h"
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	if ((c <= 65) || (c >= 90))
-		return (c);	
-	return (c + 32);
+	size_t			i;
+	unsigned char	*ptr_s1;
+	unsigned char	*ptr_s2;
+
+	i = 0;
+	ptr_s1 = (unsigned char *)s1;
+	ptr_s2 = (unsigned char *)s2;
+	if (n == 0)
+		return (0);
+	while (ptr_s1[i] == ptr_s2[i] && (i < n - 1))
+		i++;
+	if (ptr_s1[i] != ptr_s2[i])
+		return (ptr_s1[i] - ptr_s2[i]);
+	return (0);
 }

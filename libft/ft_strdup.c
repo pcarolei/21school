@@ -1,38 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strcat.c                                           :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/05 13:00:21 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/05 13:00:29 by pcarolei         ###   ########.fr       */
+/*   Created: 2019/04/12 01:59:12 by pcarolei          #+#    #+#             */
+/*   Updated: 2019/04/12 02:01:26 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		strlen(char *str)
+#include "libft.h"
+
+char	*ft_strdup(const char *s1)
 {
-	int i;
+	char	*s2;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-char	*strcat(char *dest, char *src)
-{
-	unsigned int i;
-	unsigned int k;
-
-	i = strlen(dest);
-	k = 0;
-	while (src[k] != '\0')
-	{
-		dest[i] = src[k];
-		i++;
-		k++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	s2 = ft_strnew(ft_strlen(s1) + 1);
+	ft_memcpy(s2, s1, ft_strlen(s1) + 1);
+	return (s2);
 }

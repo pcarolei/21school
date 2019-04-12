@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strcmp.c                                           :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/05 13:02:14 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/05 13:02:20 by pcarolei         ###   ########.fr       */
+/*   Created: 2019/04/12 01:15:20 by pcarolei          #+#    #+#             */
+/*   Updated: 2019/04/12 01:22:53 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	strcmp(char *s1, char *s2)
-{
-	unsigned int i;
+#include "libft.h"
 
-	i = 0;
-	while (s1[i] == s2[i] && s1[i] != '\0')
-		i++;
-	if (s2[i] == '\0' && s1[i] != '\0')
-		return ((int)s1[i]);
-	else if (s1[i] == '\0' && s2[i] != '\0')
-		return ((int)s2[i]);
-	else if ((int)s1[i] != (int)s2[i])
-		return ((int)s1[i] - (int)s2[i]);
-	return (0);
+int	ft_strequ(char const *s1, char const *s2)
+{
+	if (ft_strcmp(s1, s2) != 0)
+		return (0);
+	return (1);
 }

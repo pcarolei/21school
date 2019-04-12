@@ -1,39 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi.c                                             :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/04 15:41:51 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/04 15:42:08 by pcarolei         ###   ########.fr       */
+/*   Created: 2019/04/12 03:31:26 by pcarolei          #+#    #+#             */
+/*   Updated: 2019/04/12 03:59:51 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		atoi(char *str)
-{
-	int		i;
-	int		res;
-	int		sign;
+#include "libft.h"
 
-	sign = 1;
+void	ft_striter(char *s, void (*f)(char *))
+{
+	unsigned int	i;
+
 	i = 0;
-	res = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
-	|| str[i] == '\r' || str[i] == '\f')
-		i++;
-	if (str[i] == '-')
+	while (s[i])
 	{
-		sign = (-1);
+		f(&s[i]);
 		i++;
 	}
-	if (str[i] == '+')
-	{
-		i++;
-		if (sign == -1)
-			return (0);
-	}
-	while (str[i] >= 48 && str[i] <= 57)
-		res = res * 10 + (str[i++] - 48);
-	return (sign * res);
 }

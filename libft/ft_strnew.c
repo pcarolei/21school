@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isdigit.c                                          :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/05 17:31:25 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/05 17:31:44 by pcarolei         ###   ########.fr       */
+/*   Created: 2019/04/12 01:07:05 by pcarolei          #+#    #+#             */
+/*   Updated: 2019/04/12 01:08:08 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int isdigit(int c)
+#include "libft.h"
+
+char	*ft_strnew(size_t size)
 {
-	char	char_c;
-	char_c = c + '0';
-	return (char_c >= '0' && char_c <= '9');
+	return ((char *)ft_memalloc(size));
 }

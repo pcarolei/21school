@@ -1,2 +1,6 @@
 .DS_Store
 *.out
+relations
+/old
+/old/*.*
+libft.a

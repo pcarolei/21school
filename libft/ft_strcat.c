@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strncpy.c                                          :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/05 13:03:34 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/05 13:03:36 by pcarolei         ###   ########.fr       */
+/*   Created: 2019/04/11 04:18:55 by pcarolei          #+#    #+#             */
+/*   Updated: 2019/04/11 04:19:55 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strncpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int i;
+#include "libft.h"
 
-	i = 0;
-	while (i < n && src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	while (i < n && dest[i] != '\0')
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+char	*ft_strcat(char *s1, const char *s2)
+{
+	return (ft_strncat(s1, s2, ft_strlen(s2)));
 }
