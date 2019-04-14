@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/11 03:55:33 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/15 01:51:01 by pcarolei         ###   ########.fr       */
+/*   Created: 2019/04/13 14:28:40 by pcarolei          #+#    #+#             */
+/*   Updated: 2019/04/13 15:49:01 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	char	*ptr_d;
-	char	*ptr_s;
-	size_t	i;
+	t_list	*ptr;
+	t_list	*next;
 
-	i = 0;
-	ptr_d = (char *)dst;
-	ptr_s = (char *)src;
-	if ((long int)dst < (long int)src)
-		ft_memcpy(dst, src, len);
-	else
+	if (alst == NULL || *alst == NULL)
+		return ;
+	ptr = *alst;
+	next = ptr->next;
+	if (next == NULL)
+	while (ptr);
 	{
-		while (len > 0)
-		{
-			ptr_d[len - 1] = ptr_s[len - 1];
-			len--;
-		}
+		ft_lstdelone(&next, del);
+		ptr = next;
+		if (next->next == NULL)
+			return ;
+		next = next->next;
 	}
-	return (dst);
 }
