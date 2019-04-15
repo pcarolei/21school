@@ -6,13 +6,13 @@
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 23:56:07 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/15 05:12:51 by pcarolei         ###   ########.fr       */
+/*   Updated: 2019/04/15 05:19:28 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-static size_t	ft_get_words_cnt(char const *s, char c)
+
+static size_t		ft_get_words_cnt(char const *s, char c)
 {
 	size_t	cnt;
 	size_t	s_len;
@@ -35,7 +35,7 @@ static size_t	ft_get_words_cnt(char const *s, char c)
 	return (cnt);
 }
 
-static const char		*ft_get_next_word_pos(char const *s, char c)
+static const char	*ft_get_next_word_pos(char const *s, char c)
 {
 	size_t	i;
 
@@ -53,17 +53,17 @@ static const char		*ft_get_next_word_pos(char const *s, char c)
 			{
 				if (s[i] == '\0')
 					return (NULL);
-				i++;	
+				i++;
 			}
 			while (s[i] == c)
-			   i++;	
+				i++;
 			return (&s[i]);
 		}
 	}
 	return (NULL);
 }
 
-static char	*ft_create_word(char const *s, char c)
+static char			*ft_create_word(char const *s, char c)
 {
 	size_t	i;
 	char	*new_str;
@@ -76,7 +76,7 @@ static char	*ft_create_word(char const *s, char c)
 	return (new_str);
 }
 
-char	*ft_strtrimc(char const *s, char c)
+char				*ft_strtrimc(char const *s, char c)
 {
 	size_t	start;
 	size_t	end;
@@ -97,12 +97,12 @@ char	*ft_strtrimc(char const *s, char c)
 	return (new_str);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char				**ft_strsplit(char const *s, char c)
 {
-	char	**arr;
-	const char	*ptr;
-	size_t	arr_i;
-	size_t	words_cnt;
+	char			**arr;
+	const	char	*ptr;
+	size_t			arr_i;
+	size_t			words_cnt;
 
 	words_cnt = ft_get_words_cnt(s, c) + 1;
 	arr = (char **)malloc(sizeof(char *) * words_cnt);
@@ -113,8 +113,6 @@ char	**ft_strsplit(char const *s, char c)
 	while (arr_i < words_cnt && words_cnt != 1 && ptr != NULL)
 	{
 		arr[arr_i] = ft_create_word(ptr, c);
-		if (arr[arr_i] == NULL)
-			break;
 		ptr = ft_get_next_word_pos(ptr, c);
 		if (ptr == NULL)
 		{
@@ -126,19 +124,3 @@ char	**ft_strsplit(char const *s, char c)
 	arr[arr_i] = NULL;
 	return (arr);
 }
-/*
-#include <stdio.h>
-int main(int ac, char **av)
-{
-	char	**arr;
-	if (ac == 1)
-		return (1);
-	arr = ft_strsplit(av[1], ' ');
-	while (*arr)
-	{
-		printf("word = %s\n", *arr);
-		*arr++;
-	}
-	return (1);
-}
-*/
