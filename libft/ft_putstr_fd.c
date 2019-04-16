@@ -6,7 +6,7 @@
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/09 02:12:27 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/09 02:22:44 by pcarolei         ###   ########.fr       */
+/*   Updated: 2019/04/16 10:07:54 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
+	if (!s)
+		return ;
 	while (*s)
 		ft_putchar_fd(*s++, fd);
 }
