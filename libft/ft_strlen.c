@@ -6,7 +6,7 @@
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 02:17:30 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/11 02:38:27 by pcarolei         ###   ########.fr       */
+/*   Updated: 2019/04/16 10:51:39 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t	len;
 
 	len = 0;
-	while (*s)
-	{
+	while (s[len])
 		len++;
-		s += sizeof(char);
-	}
 	return (len);
 }
