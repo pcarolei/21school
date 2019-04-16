@@ -6,7 +6,7 @@
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 23:56:07 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/16 03:32:29 by pcarolei         ###   ########.fr       */
+/*   Updated: 2019/04/16 09:08:29 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,8 @@ static char			*ft_create_word(char const *s, char c)
 	while (s[i] != c && s[i] != '\0')
 		i++;
 	new_str = ft_strnew(i);
+	if (new_str == NULL)
+		return (NULL);
 	ft_strncpy(new_str, s, i);
 	return (new_str);
 }
@@ -113,6 +115,16 @@ char				**ft_strsplit(char const *s, char c)
 	while (arr_i < words_cnt && words_cnt != 1 && ptr != NULL)
 	{
 		arr[arr_i] = ft_create_word(ptr, c);
+		if (arr[arr_i] == NULL)
+		{
+			while (arr_i > 0)
+			{
+				free(arr[arr_i]);
+				arr_i--;
+			}
+			free(arr);
+			return (NULL);
+		}
 		ptr = ft_get_next_word_pos(ptr, c);
 		if (ptr == NULL)
 		{
@@ -121,6 +133,6 @@ char				**ft_strsplit(char const *s, char c)
 		}
 		arr_i++;
 	}
-	arr[arr_i] = NULL;
+	arr[arr_i] = ft_strnew(1);
 	return (arr);
 }

@@ -6,7 +6,7 @@
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 03:31:26 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/12 03:59:51 by pcarolei         ###   ########.fr       */
+/*   Updated: 2019/04/16 07:54:21 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striter(char *s, void (*f)(char *))
 {
 	unsigned int	i;
 
+	if (s == NULL || f == NULL)
+		return ;
 	i = 0;
 	while (s[i])
 	{

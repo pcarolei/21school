@@ -6,7 +6,7 @@
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 04:32:02 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/12 00:58:08 by pcarolei         ###   ########.fr       */
+/*   Updated: 2019/04/16 07:46:06 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memalloc(size_t size)
 
 	ptr = (char *)malloc(sizeof(char) * size);
 	if (ptr == NULL)
-		return (NULL);
+		return NULL;
 	while ((size--) >= 1)
 		ptr[size] = '\0';
 	return ((void *)ptr);
