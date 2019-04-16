@@ -6,7 +6,7 @@
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/09 02:20:27 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/16 07:01:47 by pcarolei         ###   ########.fr       */
+/*   Updated: 2019/04/16 13:03:28 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,4 +89,5 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void			*ft_memrchr(const void *s, int c, size_t n);
 void			ft_lstaddl(t_list **alst, t_list *new);
 int				ft_isspace(char c);
+char			*ft_strtrimc(char const *s, char c);
 #endif
