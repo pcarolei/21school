@@ -6,27 +6,29 @@
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 02:22:31 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/16 09:33:41 by pcarolei         ###   ########.fr       */
+/*   Updated: 2019/04/16 11:37:03 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+#include <stdio.h>
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	char			*sub;
 	unsigned int	start;
 
-	if (ft_strlen(needle) == 0)
-		return (ft_strdup(haystack));
+	if (ft_strlen(needle) == 0 || (haystack == needle))
+		return ((char *)haystack);
 	start = 0;
-	while (start + (unsigned int)ft_strlen(needle) < (unsigned int)len)
+	if (!haystack)
+		start = (unsigned int)*haystack++;
+	while (start + ft_strlen(needle) < (unsigned int)len)
 	{
 		sub = ft_strsub(haystack, start, ft_strlen(needle));
 		if (ft_strequ(needle, sub) == 1)
 		{
 			ft_strdel(&sub);
-			return (ft_strdup(&haystack[start]));
+			return ((char *)&haystack[start]);
 		}
 		ft_strdel(&sub);
 		start++;
