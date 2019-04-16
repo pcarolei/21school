@@ -6,7 +6,7 @@
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 23:56:07 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/15 05:19:28 by pcarolei         ###   ########.fr       */
+/*   Updated: 2019/04/16 03:32:29 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ static char			*ft_create_word(char const *s, char c)
 	return (new_str);
 }
 
-char				*ft_strtrimc(char const *s, char c)
+static char			*ft_strtrimc(char const *s, char c)
 {
 	size_t	start;
 	size_t	end;

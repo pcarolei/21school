@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstaddl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/13 13:25:24 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/16 04:35:03 by pcarolei         ###   ########.fr       */
+/*   Created: 2019/04/16 04:43:59 by pcarolei          #+#    #+#             */
+/*   Updated: 2019/04/16 05:45:27 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+void	ft_lstaddl(t_list **alst, t_list *new)
 {
-	t_list	*new_lst;
+	t_list	*ptr;
 
-	new_lst = (t_list *)malloc(sizeof(t_list));
-	if (new_lst == NULL)
-		return (NULL);
-	new_lst->next = NULL;
-	if (content == NULL)
+	if (*alst == NULL)
 	{
-		new_lst->content = NULL;
-		new_lst->content_size = 0;
-		return (new_lst);
+		*alst = new;
+		return ;
 	}
-	new_lst->content = malloc(content_size);
-	ft_memcpy(new_lst->content, content, content_size);
-	new_lst->content_size = content_size;
-	return (new_lst);
+	ptr = *alst;
+	while (ptr->next)
+		ptr = ptr->next;
+	ptr->next = new;
 }
