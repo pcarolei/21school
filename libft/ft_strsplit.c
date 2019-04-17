@@ -6,7 +6,7 @@
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 23:56:07 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/17 07:44:04 by pcarolei         ###   ########.fr       */
+/*   Updated: 2019/04/17 18:31:39 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,26 +81,26 @@ char				**ft_strsplit(char const *s, char c)
 {
 	char		**arr;
 	const char	*wrd;
+	const char	*s_tr;
 	size_t		arr_i;
 
 	if (!s)
 		return (NULL);
 	arr = (char **)malloc(sizeof(char *) * ft_get_words_cnt(s, c) + 1);
 	if (!arr)
-	{
-		free(arr);
 		return (NULL);
-	}
 	arr_i = 0;
-	wrd = ft_strtrimc(s, c);
+	s_tr = ft_strtrimc(s, c);
+	wrd = s_tr;
 	while (arr_i < ft_get_words_cnt(s, c))
 	{
 		arr[arr_i] = ft_create_word(wrd, c);
-		if (!arr[arr_i])
+		if (!(arr[arr_i]))
 			return (ft_free_arr(arr));
 		arr_i++;
 		wrd = ft_get_next_word_pos(wrd, c);
 	}
+	free((void *)s_tr);
 	arr[arr_i] = NULL;
 	return (arr);
 }
