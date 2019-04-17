@@ -6,7 +6,7 @@
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 23:56:07 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/16 13:54:57 by pcarolei         ###   ########.fr       */
+/*   Updated: 2019/04/17 06:59:41 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,8 @@ char			**ft_strsplit(char const *s, char c)
 	const char	*wrd;
 	size_t		arr_i;
 
+	if (!s)
+		return (NULL);
 	arr = (char **)malloc(sizeof(char *) * ft_get_words_cnt(s, c) + 1);
 	if (!arr || ft_get_words_cnt(s, c) == 0)
 	{
@@ -99,10 +101,11 @@ char			**ft_strsplit(char const *s, char c)
 		arr_i++;
 		wrd = ft_get_next_word_pos(wrd, c);
 	}
-	arr[arr_i] = ft_strnew(1);
+	arr[arr_i] = NULL;
 	return (arr);
 }
 /*
+#include <stdio.h>
 int main()
 {
 	char	**arr = ft_strsplit(ft_strdup("      split       this for   me  !"), ' ');
