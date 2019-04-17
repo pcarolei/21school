@@ -6,7 +6,7 @@
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/09 02:38:30 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/16 10:07:30 by pcarolei         ###   ########.fr       */
+/*   Updated: 2019/04/17 08:04:27 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	get_number_len(int n)
 	return (cnt);
 }
 
-static char	*ft_itoa_min_int_helper()
+static char	*ft_itoa_min_int_helper(void)
 {
 	char	*part1;
 	char	*part2;
@@ -65,9 +65,8 @@ char		*ft_itoa(int n)
 	{
 		if (n_size - i == 0 && flag == 1)
 			break ;
-		n_string[n_size - i] = n % 10 + '0';
+		n_string[n_size - (i++)] = n % 10 + '0';
 		n = n / 10;
-		i++;
 	}
 	n_string[n_size] = '\0';
 	return (n_string);

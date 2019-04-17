@@ -6,7 +6,7 @@
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 00:25:24 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/16 11:57:04 by pcarolei         ###   ########.fr       */
+/*   Updated: 2019/04/17 08:01:04 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ int	ft_atoi(const char *str)
 	while (str[i] >= 48 && str[i] <= 57)
 		res = res * 10 + (str[i++] - 48);
 	if (res * 10 / 10 != res)
-		return ((sign == 1)? (-1) : 0);
+		return ((sign == 1) ? (-1) : 0);
 	return (sign * (int)res);
 }

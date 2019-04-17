@@ -6,7 +6,7 @@
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 00:44:39 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/16 11:50:29 by pcarolei         ###   ########.fr       */
+/*   Updated: 2019/04/17 09:07:45 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (-1);
 	if (i == n)
 		return (0);
-	return ((int)s1[i] - (int)s2[i]);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
