@@ -6,13 +6,13 @@
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/12 23:56:07 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/17 06:59:41 by pcarolei         ###   ########.fr       */
+/*   Updated: 2019/04/17 07:44:04 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_get_words_cnt(char const *s, char c)
+static size_t		ft_get_words_cnt(char const *s, char c)
 {
 	size_t	cnt;
 	size_t	s_len;
@@ -77,7 +77,7 @@ static const char	*ft_get_next_word_pos(char const *s, char c)
 	return (&s[i]);
 }
 
-char			**ft_strsplit(char const *s, char c)
+char				**ft_strsplit(char const *s, char c)
 {
 	char		**arr;
 	const char	*wrd;
@@ -86,7 +86,7 @@ char			**ft_strsplit(char const *s, char c)
 	if (!s)
 		return (NULL);
 	arr = (char **)malloc(sizeof(char *) * ft_get_words_cnt(s, c) + 1);
-	if (!arr || ft_get_words_cnt(s, c) == 0)
+	if (!arr)
 	{
 		free(arr);
 		return (NULL);
@@ -104,17 +104,3 @@ char			**ft_strsplit(char const *s, char c)
 	arr[arr_i] = NULL;
 	return (arr);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	char	**arr = ft_strsplit(ft_strdup("      split       this for   me  !"), ' ');
-	size_t	i = 0;
-	while (arr[i][0] != '\0')
-	{
-		printf("%s\n", arr[i]);
-		i++;
-	}
-	return (0);
-}
-*/
