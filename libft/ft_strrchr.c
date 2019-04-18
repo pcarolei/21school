@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/12 01:11:19 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/16 07:49:44 by pcarolei         ###   ########.fr       */
+/*   Created: 2019/04/13 15:42:09 by pcarolei          #+#    #+#             */
+/*   Updated: 2019/04/16 11:02:49 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+char	*ft_strrchr(const char *s, int c)
 {
-	if (s == NULL)
-		return ;
-	ft_memset((void *)s, (int)'\0', ft_strlen(s));
+	return ((char *)(ft_memrchr((void *)s, c, ft_strlen(s))));
 }

@@ -6,7 +6,7 @@
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 03:55:33 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/11 23:57:16 by pcarolei         ###   ########.fr       */
+/*   Updated: 2019/04/16 12:11:11 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,23 @@
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char	*ptr_d;
-	char	*src_copy;
+	char	*ptr_s;
+	size_t	i;
 
-	src_copy = (char *)malloc(sizeof(char) * len);
-	memcpy(src_copy, src, len);
+	if (dst == src)
+		return (dst);
+	i = 0;
 	ptr_d = (char *)dst;
-	while ((len--) > 0)
-		ptr_d[len] = src_copy[len];
-	free(src_copy);
+	ptr_s = (char *)src;
+	if ((long int)dst < (long int)src)
+		ft_memcpy(dst, src, len);
+	else
+	{
+		while (len > 0)
+		{
+			ptr_d[len - 1] = ptr_s[len - 1];
+			len--;
+		}
+	}
 	return (dst);
 }

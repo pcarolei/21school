@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_lstaddl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/12 01:11:19 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/16 07:49:44 by pcarolei         ###   ########.fr       */
+/*   Created: 2019/04/16 04:43:59 by pcarolei          #+#    #+#             */
+/*   Updated: 2019/04/17 19:23:01 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+void	ft_lstaddl(t_list **alst, t_list *new)
 {
-	if (s == NULL)
+	t_list	*ptr;
+
+	if (!alst)
 		return ;
-	ft_memset((void *)s, (int)'\0', ft_strlen(s));
+	if (!*alst)
+	{
+		*alst = new;
+		return ;
+	}
+	ptr = *alst;
+	while (ptr->next)
+		ptr = ptr->next;
+	ptr->next = new;
 }

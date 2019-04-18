@@ -1,20 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrimc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/12 01:11:19 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/04/16 07:49:44 by pcarolei         ###   ########.fr       */
+/*   Created: 2019/04/16 13:01:57 by pcarolei          #+#    #+#             */
+/*   Updated: 2019/04/16 13:03:00 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+char	*ft_strtrimc(char const *s, char c)
 {
-	if (s == NULL)
-		return ;
-	ft_memset((void *)s, (int)'\0', ft_strlen(s));
+	size_t	start;
+	size_t	end;
+	char	*new_str;
+
+	if (!s)
+		return (NULL);
+	start = 0;
+	end = ft_strlen(s);
+	while (s[start] == c)
+		start++;
+	while (s[end - 1] == c)
+		end--;
+	if (end == 0)
+		return (ft_strnew(1));
+	new_str = ft_strnew(end - start);
+	if (new_str == NULL)
+		return (NULL);
+	ft_strncpy(new_str, &s[start], end - start);
+	return (new_str);
 }
