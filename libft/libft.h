@@ -90,4 +90,5 @@ void			*ft_memrchr(const void *s, int c, size_t n);
 void			ft_lstaddl(t_list **alst, t_list *new);
 int				ft_isspace(char c);
 char			*ft_strtrimc(char const *s, char c);
+
 #endif
