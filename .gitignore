@@ -1,6 +1,9 @@
+# common
 .DS_Store
 *.out
-relations
 /old
 /old/*.*
+# libft
 libft.a
+# Get_Next_Line
+old/*
