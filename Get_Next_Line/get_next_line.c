@@ -6,21 +6,19 @@
 /*   By: pcarolei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 06:10:17 by pcarolei          #+#    #+#             */
-/*   Updated: 2019/08/05 02:29:42 by pcarolei         ###   ########.fr       */
+/*   Updated: 2019/08/05 02:58:33 by pcarolei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*separator(char *fd_str, int opt)
+char	*split_by_nl(char *fd_str, int opt)
 {
 	size_t	n_pos;
 	char	*new_line;
 
-	if (opt == 1 && !(ft_strchr(fd_str, '\n')))
-		return (fd_str);
-	if (opt == 2 && !(ft_strchr(fd_str, '\n')))
-		return (NULL);
+	if (!ft_strchr(fd_str, '\n'))
+		return ((opt == 1) ? (fd_str) : (NULL));
 	n_pos = ft_strchr(fd_str, '\n') - fd_str;
 	if (opt == 1)
 		return (ft_strsub(fd_str, 0, n_pos));
@@ -29,7 +27,7 @@ char	*separator(char *fd_str, int opt)
 	return (new_line);
 }
 
-char	*joiner(char *fd_str, char *read_buf)
+char	*concat_strings(char *fd_str, char *read_buf)
 {
 	char	*new_fd_str;
 
@@ -54,13 +52,13 @@ int		get_next_line(const int fd, char **line)
 		if (ret == -1)
 			return (-1);
 		read_buf[ret] = '\0';
-		fd_str = joiner(fd_str, read_buf);
+		fd_str = concat_strings(fd_str, read_buf);
 		if (ret == 0 && fd_str[0] == '\0')
 			return (0);
 		if (ret == 0)
-			break;
+			break ;
 	}
-	*line = separator(fd_str, 1);
-	fd_str = separator(fd_str, 2);
+	*line = split_by_nl(fd_str, 1);
+	fd_str = split_by_nl(fd_str, 2);
 	return (1);
 }
