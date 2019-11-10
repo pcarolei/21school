@@ -1,0 +1,4 @@
+#	Task:
+#	What file contains the local DNS entries?
+echo "/etc/hosts/";
+cat /etc/hosts;

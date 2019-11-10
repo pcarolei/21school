@@ -1,0 +1,3 @@
+#	Task:
+#	Find the command that add a new local user
+useradd local_user

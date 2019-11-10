@@ -1,0 +1,3 @@
+#	Task:
+#	Find the IP that was assigned to you by DHCP server
+ifconfig en0 | grep "inet" | tail -n 1| cut -d' ' -f2

@@ -1,0 +1,4 @@
+#	Task:
+#	Name the command that find, in real time, currently running processes
+echo 'ps aux'
+ps aux

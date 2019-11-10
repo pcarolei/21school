@@ -1,0 +1,4 @@
+#	Task:
+#	Find the command that kills the background command’s process
+echo 'pkill name'
+pkill tail

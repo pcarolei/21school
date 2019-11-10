@@ -1,0 +1,5 @@
+#	Task:
+#	Name the command that displays the available space left and used
+#	on the system in an humanly understandable way
+echo 'df --human-readable --total'
+df --human-readable --total

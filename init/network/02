@@ -1,0 +1,6 @@
+#	Task:
+#	Identify and display the Ethernet interface characteristics:
+#	(a)	Identify broadcast adress
+ifconfig en0 | grep broadcast | cut -d' ' -f6
+#	(b)	Identify all IP adresses which are part of same subnet
+arp -a

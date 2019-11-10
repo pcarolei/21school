@@ -1,0 +1,7 @@
+#	Task:
+#	Use the output of the previous command to find the name and IP address
+#	of the device that makes the link between you (local network) and the
+#	outside world
+cat traceroute.result \
+|	grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' \
+|	head -n 1

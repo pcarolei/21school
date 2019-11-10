@@ -1,0 +1,4 @@
+#	Task:
+#	Name the command that lists the partition tables of drives?
+echo "fdisk -l"
+fdisk -l

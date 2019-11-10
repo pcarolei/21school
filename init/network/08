@@ -1,0 +1,3 @@
+#	Task:
+#	Find the provider of slash16.org
+whois $(host slash16.org | head -n 1 | cut -c 24-)
