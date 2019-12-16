@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+	<title>EX00</title>
+</head>
+<body>
+	<div id="balloon" onClick=grow() onMouseLeave=mouseLeave()>
+	</div>
+	<script>
+		const balloon = document.getElementById("balloon");
+		let color = "red";
+		let width = 200;
+		let height = 200;
+		balloon.style.width = "".concat(width, "px");
+		balloon.style.height = "".concat(height, "px");
+		balloon.style.backgroundColor = "red";
+		balloon.style.borderRadius= "50%";
+		function changeColor()
+		{
+			if (color === "red")
+				color = "green";
+			else if (color === "green")
+				color = "blue";
+			else
+				color = "red";
+		}
+		function changeColorReversed()
+		{
+			if (color === "red")
+				color = "blue";
+			else if (color === "blue")
+				color = "green";
+			else
+				color = "red";
+		}
+
+		function grow()
+		{ 
+			if (width >= 410)
+			{
+				width = 200;
+				height = 200;
+			}
+			else
+			{
+				width += 10;
+				height += 10;
+			}
+			changeColor();
+			balloon.style.width = "".concat(width, "px");
+			balloon.style.height = "".concat(height, "px");
+			balloon.style.backgroundColor = color;
+		}
+		function mouseLeave()
+		{
+			if (width >= 205)
+			{
+				width -= 5;
+				height -= 5;
+			}
+			else
+			{
+				width = 200;
+				height = 200;
+			}
+			changeColorReversed();
+			balloon.style.width = "".concat(width, "px");
+			balloon.style.height = "".concat(height, "px");
+			balloon.style.backgroundColor = color;
+		}
+	</script>
+</body>
+</html>

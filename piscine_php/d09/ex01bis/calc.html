@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+	<title>EX01</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<form onsubmit=onSubmit()>
+	<input type="text" id="left_op" required></input>
+	<select id="select" required>
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+		<option value="%">%</option>
+	</select>
+	<input type="text" id="right_op" required></input>
+	<input type="submit" value="Try me!" required></input>
+	</form>
+<script>
+	function pleaseUseMe()
+	{
+		alert("Please, use me...");
+	}
+	setInterval(function(){pleaseUseMe()}, 30000);
+	function calc(left_op, right_op, opr)
+	{
+		left_op = parseInt(left_op);
+		right_op = parseInt(right_op);
+		if (left_op < 0 || right_op < 0)
+			return ("Error :(");
+		if (opr == "+")
+			return (left_op + right_op);
+		if (opr == "-")
+			return (left_op - right_op);
+		if (opr == "*")
+			return (left_op * right_op);
+		if (opr == "/")
+		{
+			if (right_op == 0)
+				return ("It's over 9000!");
+			return (left_op / right_op);
+		}
+		if (opr == "%")
+		{
+			if (right_op == 0)
+				return ("It's over 9000!");
+			return (left_op % right_op);
+		}
+	}
+	function onSubmit()
+	{
+
+		let left_op = $("#left_op")[0].value;
+		let right_op = $("#right_op")[0].value;
+		let opr = $("#select")[0].value;
+		alert(calc(left_op, right_op, opr));
+		console.log(calc(left_op, right_op, opr));
+	}
+</script>
+</body>
+</html>

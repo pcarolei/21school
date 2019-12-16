@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+	<title>EX00</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="balloon" onClick=grow() onMouseLeave=mouseLeave()>
+	</div>
+	<script>
+		const balloon = $("#balloon")[0];
+		let color = "red";
+		let width = 200;
+		let height = 200;
+		$("#balloon").width(width);
+		$("#balloon").height(height);
+		$("#balloon").css("background-color", "red");
+		$("#balloon").css("border-radius", "50%");
+		function changeColor()
+		{
+			if (color === "red")
+				color = "green";
+			else if (color === "green")
+				color = "blue";
+			else
+				color = "red";
+		}
+		function changeColorReversed()
+		{
+			if (color === "red")
+				color = "blue";
+			else if (color === "blue")
+				color = "green";
+			else
+				color = "red";
+		}
+
+		function grow()
+		{ 
+			if (width >= 410)
+			{
+				width = 200;
+				height = 200;
+			}
+			else
+			{
+				width += 10;
+				height += 10;
+			}
+			changeColor();
+			$("#balloon").width(width);
+			$("#balloon").height(height);
+			$("#balloon").css("background-color", color);
+		}
+		function mouseLeave()
+		{
+			if (width >= 205)
+			{
+				width -= 5;
+				height -= 5;
+			}
+			else
+			{
+				width = 200;
+				height = 200;
+			}
+			changeColorReversed();
+			$("#balloon").width(width);
+			$("#balloon").height(height);
+			$("#balloon").css("background-color", color);
+		}
+	</script>
+</body>
+</html>

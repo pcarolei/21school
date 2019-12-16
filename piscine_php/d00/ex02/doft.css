@@ -1,0 +1,197 @@
+body
+{
+	background-color: #505050;
+}
+.header
+{
+	width: 75%;
+	height: 160px;
+	border-radius: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	background-color: #909090;
+	box-shadow: 12px 12px 10px 1px #040404;
+}
+.left_part
+{
+	width: 50%;
+	float: left;
+}
+.right_part
+{
+	width: 50%;
+	float: right;
+}
+.img_logo
+{
+	width: 560px;
+	height: 130px;
+	margin-left: 15px;
+	margin-top: 13px;
+}
+.img_loupe
+{
+	width: 330px;
+	height: 175px;
+	float: right;
+	margin-right: 40px;
+	margin-top: 10px;
+}
+.img_close
+{
+	position: absolute;
+	height: 25px;
+	width: 25px;
+	right: 340px;
+	top: 142px;
+}
+.img_reload
+{
+	position: absolute;
+	top: 35px;
+	right: 340px;
+	height: 25px;
+	width: 25px;
+}
+.left_col
+{
+	position: absolute;
+	height: 590px;
+	width: 180px;
+	background-color: #909090;
+	left: 365px;
+	top: 210px;
+	border-radius: 15px;
+	box-shadow: 12px 12px 10px 1px #040404;
+}
+.center_col
+{
+	position: absolute;
+	top: 210px;
+	left: 585px;
+	width: 1390px;
+	height: 800px;
+	background-color: #909090;
+	border-radius: 15px;
+	box-shadow: 12px 12px 10px 1px #040404;
+}
+.img_cluster
+{
+	width: 1360px;
+	height: 770px;
+	margin-left: 15px;
+	margin-top: 15px;
+}
+.right_col
+{
+	position: absolute;
+	height: 590px;
+	width: 180px;
+	background-color: #909090;
+	right: 365px;
+	top: 210px;
+	border-radius: 15px;
+	box-shadow: 12px 12px 10px 1px #040404;
+}
+.icon_left
+{
+	width: 90px;
+	margin-left: 40px;
+	margin-top: 0px;
+}
+.img_arrow
+{
+	padding-top: 20px;
+}
+.img_main
+{
+	padding-top: 15px;
+	margin-top: 0px;
+}
+.img_oeil
+{
+	margin-top: 5px;
+	border: 8px solid red;
+	border-radius: 7px;
+	margin-left: 35px;
+}
+.img_outil
+{
+	margin-top: 13px;
+	margin-left: 45px;
+}
+.img_char_icon
+{
+	width: 95px;
+	margin-top: 15px;
+}
+.icon_right
+{
+	width: 100px;
+	margin-left: 40px;
+	margin-top: 0px;
+}
+.img_book
+{
+	margin-top: 22px;
+}
+.img_towel
+{
+	width: 95px;
+	margin-top: 6px;
+}
+.brick
+{
+	width: 120px;
+	height: 70px;
+	margin-left: 30px;
+	margin-top: 13px;
+	background: url("resources/brick.jpg");
+	transform: scale(1.25);
+}
+.green_box
+{
+	position: absolute;
+	top: 900px;
+	left: 266px;
+	width: 698px;
+	height: 240px;
+	background-color: #87FE8F;
+	box-shadow: 12px 12px 10px 1px #040404;
+	border-radius: 15px;
+	font-size: 25px;
+	font-family: Arial;
+}
+.gb_e
+{
+	font-size: 40px;
+	font-family: Georgia;
+	font-style: normal;
+}
+.gb1
+{
+	text-shadow: 5px 5px 4px red;
+	font-style: normal;
+}
+.gb_p
+{
+	margin-left: 15px;
+	margin-top: 10px;
+}
+.button
+{
+	font-size: 19px;
+	padding-left: 10px;
+	padding-right: 10px;
+	position: absolute;
+	top: 119px;
+	left: 538px;
+}
+.input
+{
+	height: 22px;
+	margin-left: 10px;
+	padding-top: -10px;
+	margin-top: -10px;
+}
