@@ -1,0 +1,23 @@
+Hello pcarolei,
+
+Your exam session for the project "C Exam Alone In The Dark - Beginner" has just been marked as finished by the exam system.
+The assignment subjects, and grading traces are attached to this email.
+The contents of your turn-in repository have not been attached for the following reason: "Collection timed out"
+
+
+Start time: 14/11/2019 09:00:50 UTC
+End time: 14/11/2019 12:57:17 UTC
+Mode: real
+Final grade: 64/100
+
+Assignments:
+  Level 4:
+    1: ft_itoa_base for 11 potential points (Current)
+    0: flood_fill for 16 potential points (Failure)
+    0: hidenp for 64 potential points (Success)
+
+
+
+Automated regards,
+
+42's exam system

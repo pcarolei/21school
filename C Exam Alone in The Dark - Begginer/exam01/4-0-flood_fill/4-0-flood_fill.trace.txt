@@ -1,0 +1,43 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+il-d3.21-school.ru
+Darwin 16.7.0 x86_64
+$> date
+Thu Nov 14 14:46:00 MSK 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/exam_20191114/pcarolei
+
+= Git history ==================================================================
+$> git -C /var/folders/qp/br8flm595l98rsrdp_fw9xnr0000gq/T/tmpGw3av7/user log --pretty='%H - %an, %ad : %s'
+22610e67c8718b09d0b68b76593faa089ead54d0 - Exam 42, Thu Nov 14 12:51:23 2019 +0300 : small fix
+ab79d4bd8420a828a73fad8252305c3672a75b46 - Exam 42, Thu Nov 14 12:48:02 2019 +0300 : hidenp emptyline fix
+b74ebbd34abd09b92000c517b121eacddc52ae71 - Exam 42, Thu Nov 14 12:41:21 2019 +0300 : hidenp +
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/qp/br8flm595l98rsrdp_fw9xnr0000gq/T/tmpGw3av7/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  680 Nov 14 14:46 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Nov 14 14:46 hidenp
+
+/var/folders/qp/br8flm595l98rsrdp_fw9xnr0000gq/T/tmpGw3av7/user/hidenp:
+total 8
+-rw-r--r--  1 deepthought  deepthought  912 Nov 14 14:46 hidenp.c
+ 
+= flood_fill ===================================================================
+Nothing turned in
+Grade: 0
+
+= Final grade: 0 ===============================================================

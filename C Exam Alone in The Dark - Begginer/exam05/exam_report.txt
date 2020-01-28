@@ -1,0 +1,21 @@
+Hello pcarolei,
+
+Your exam session for the project "C Exam Alone In The Dark - Beginner" has just been marked as finished by the exam system.
+The assignment subjects, grading traces, and the contents of your turn-in repository are attached to this email.
+
+
+Start time: 19/12/2019 09:00:43 UTC
+End time: 19/12/2019 10:24:37 UTC
+Mode: real
+Final grade: 0/100
+
+Assignments:
+  Level 4:
+    1: brainfuck for 75 potential points (Current)
+    0: rev_wstr for 80 potential points (Failure)
+
+
+
+Automated regards,
+
+42's exam system

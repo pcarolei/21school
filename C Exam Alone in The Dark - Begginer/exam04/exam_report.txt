@@ -1,0 +1,21 @@
+Hello pcarolei,
+
+Your exam session for the project "C Exam Alone In The Dark - Beginner" has just been marked as finished by the exam system.
+The assignment subjects, grading traces, and the contents of your turn-in repository are attached to this email.
+
+
+Start time: 30/11/2019 09:04:53 UTC
+End time: 30/11/2019 10:20:26 UTC
+Mode: real
+Final grade: 80/100
+
+Assignments:
+  Level 5:
+    0: biggest_pal for 20 potential points (Current)
+    0: sort_list for 80 potential points (Success)
+
+
+
+Automated regards,
+
+42's exam system

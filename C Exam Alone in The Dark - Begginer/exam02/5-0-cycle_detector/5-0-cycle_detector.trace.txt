@@ -1,0 +1,53 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+at-o8.21-school.ru
+Darwin 16.7.0 x86_64
+$> date
+Thu Nov 21 13:48:13 MSK 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/exam_20191121/pcarolei
+
+= Git history ==================================================================
+$> git -C /var/folders/j_/6zp38cls4zncvb1137_n39n40000gq/T/tmpXbcvjl/user log --pretty='%H - %an, %ad : %s'
+7d55b8334aec2461607198b3651d7b8a37fb6cf6 - Exam 42, Thu Nov 21 13:46:56 2019 +0300 : +cycle_detector
+efc5dd033794c938f2732fb3a2dad7f9a19b9025 - Exam 42, Thu Nov 21 13:23:01 2019 +0300 : +fprime
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/j_/6zp38cls4zncvb1137_n39n40000gq/T/tmpXbcvjl/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  515 Nov 21 13:48 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Nov 21 13:48 cycle_detector
+drwxr-xr-x  3 deepthought  deepthought  102 Nov 21 13:48 fprime
+
+/var/folders/j_/6zp38cls4zncvb1137_n39n40000gq/T/tmpXbcvjl/user/cycle_detector:
+total 8
+-rw-r--r--  1 deepthought  deepthought  527 Nov 21 13:48 cycle_detector.c
+
+/var/folders/j_/6zp38cls4zncvb1137_n39n40000gq/T/tmpXbcvjl/user/fprime:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1146 Nov 21 13:48 fprime.c
+ 
+= cycle_detector ===============================================================
+$> gcc -Wextra -Wall -Werror main.c test_cycle_detector.c cycle_detector.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./eqe9thibwxp4w2rr9cunzwbn
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================

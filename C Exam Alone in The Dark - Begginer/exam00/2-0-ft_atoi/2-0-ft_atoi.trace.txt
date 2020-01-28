@@ -1,0 +1,91 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+ox-g2.21-school.ru
+Darwin 16.7.0 x86_64
+$> date
+Sat Sep 28 15:26:12 MSK 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/exam_20190928/pcarolei
+
+= Git history ==================================================================
+$> git -C /var/folders/q7/7227_t414p50d3ym3v5l4wgr0000gq/T/tmpokKJX3/user log --pretty='%H - %an, %ad : %s'
+4518649557e2061db6dbf30bef3cd783e93fdf4c - Exam 42, Sat Sep 28 15:23:54 2019 +0300 : +ft_atoi
+fa5373c66743bf24655762e554ff27a30d47ba5a - Exam 42, Sat Sep 28 14:38:06 2019 +0300 : + rotone
+c0a2eb550a4f80eaea00bde4c6ff53eaf423c2f2 - Exam 42, Sat Sep 28 14:14:39 2019 +0300 : + maff_alpha
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/q7/7227_t414p50d3ym3v5l4wgr0000gq/T/tmpokKJX3/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  689 Sep 28 15:26 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Sep 28 15:26 ft_atoi
+drwxr-xr-x  3 deepthought  deepthought  102 Sep 28 15:26 maff_alpha
+drwxr-xr-x  3 deepthought  deepthought  102 Sep 28 15:26 rotone
+
+/var/folders/q7/7227_t414p50d3ym3v5l4wgr0000gq/T/tmpokKJX3/user/ft_atoi:
+total 8
+-rw-r--r--  1 deepthought  deepthought  528 Sep 28 15:26 ft_atoi.c
+
+/var/folders/q7/7227_t414p50d3ym3v5l4wgr0000gq/T/tmpokKJX3/user/maff_alpha:
+total 8
+-rw-r--r--  1 deepthought  deepthought  96 Sep 28 15:26 maff_alpha.c
+
+/var/folders/q7/7227_t414p50d3ym3v5l4wgr0000gq/T/tmpokKJX3/user/rotone:
+total 8
+-rw-r--r--  1 deepthought  deepthought  507 Sep 28 15:26 rotone.c
+ 
+= ft_atoi ======================================================================
+$> gcc -Wextra -Wall -Werror main.c ft_atoi.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./8tnfuzif2pkzdnkrh7xi4gt7 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./v4bwd1crtk0n6szzqo3saao3 "21" "2313"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./nnb23zqxyot5lev0yiluf44u 2147483647
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./bpx1ked1udzdgo5l9h2p1dul -2147483648
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./zeud9o188hcck0gvi51j1xh5 0
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./6r9eor73vqw250w7ywoswatx 12211t11
+$> diff -U 3 user_output_test6 test6.output | cat -e
+--- user_output_test6	2019-09-28 15:26:15.000000000 +0300$
++++ test6.output	2019-09-28 15:26:15.000000000 +0300$
+@@ -1 +1 @@$
+-12217811$
+\ No newline at end of file$
++12211$
+\ No newline at end of file$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================
